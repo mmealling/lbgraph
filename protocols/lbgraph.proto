@@ -1,0 +1,23 @@
+package lbgraph;
+message getNodeRequest
+{
+ required string nodeid = 1;
+}
+message getNodeResponse
+{
+  message Node {
+	required string name = 1;
+	required string type = 2;
+	required string id = 3;
+  }
+  required Node result = 1;
+}  
+
+message getNeighborsRequest
+{
+ required string nodeid = 1;
+}
+message getNeighborsResponse
+{
+  repeated Node result = 1;
+}
